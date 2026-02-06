@@ -1,14 +1,204 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
-</head>
-<body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tax Calculator Homepage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#308ce8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center justify-between p-4 h-16 max-w-md mx-auto">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-white text-xl">calculate</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-lg font-extrabold tracking-tight">TaxCalc</h2>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-20">
+<!-- Hero Section -->
+<section class="px-4 pt-8 pb-6">
+<h1 class="text-[#111418] dark:text-white text-3xl font-extrabold leading-tight tracking-tight mb-3">
+                Calculate Your Take-Home Pay in Seconds
+            </h1>
+<p class="text-[#637588] dark:text-gray-400 text-base font-normal leading-relaxed">
+                Get accurate after-tax salary estimates based on the latest 2024 tax laws.
+            </p>
+</section>
+<!-- Quick Calculator Card -->
+<section class="px-4 mb-8">
+<div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-xl shadow-primary/5 border border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2 mb-6">
+<div class="size-2 bg-primary rounded-full"></div>
+<p class="text-sm font-bold uppercase tracking-wider text-primary">Quick Calculator</p>
+</div>
+<div class="space-y-5">
+<!-- Income Input -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#111418] dark:text-gray-200">Annual Gross Income</label>
+<div class="relative flex items-center">
+<span class="absolute left-4 text-[#637588] font-medium">$</span>
+<input class="w-full h-14 pl-8 pr-4 rounded-lg border border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111418] dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-all text-lg font-medium" placeholder="e.g. 75,000" type="number"/>
+</div>
+</div>
+<!-- Location Input -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#111418] dark:text-gray-200">Location</label>
+<div class="relative flex items-center">
+<span class="absolute left-4 material-symbols-outlined text-[#637588]">location_on</span>
+<select class="w-full h-14 pl-12 pr-4 rounded-lg border border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111418] dark:text-white focus:ring-2 focus:ring-primary focus:border-primary appearance-none transition-all font-medium">
+<option>United States</option>
+<option>United Kingdom</option>
+<option>Germany</option>
+<option>Canada</option>
+<option>Australia</option>
+</select>
+<span class="absolute right-4 material-symbols-outlined text-[#637588] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- CTA Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white h-14 rounded-lg font-bold text-lg shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98] mt-2">
+                        Calculate Now
+                        <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="px-4 mb-10">
+<div class="flex items-center justify-between py-4 px-2 bg-primary/5 dark:bg-primary/10 rounded-xl">
+<div class="flex flex-col items-center gap-1 flex-1 border-r border-primary/10">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="text-[10px] font-bold text-[#637588] dark:text-gray-400 uppercase">Accurate</span>
+</div>
+<div class="flex flex-col items-center gap-1 flex-1 border-r border-primary/10">
+<span class="material-symbols-outlined text-primary">lock</span>
+<span class="text-[10px] font-bold text-[#637588] dark:text-gray-400 uppercase">Secure</span>
+</div>
+<div class="flex flex-col items-center gap-1 flex-1">
+<span class="material-symbols-outlined text-primary">update</span>
+<span class="text-[10px] font-bold text-[#637588] dark:text-gray-400 uppercase">2024 Ready</span>
+</div>
+</div>
+</section>
+<!-- Popular Calculators Section -->
+<section class="px-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold">Popular Calculators</h3>
+<button class="text-primary text-sm font-bold">See All</button>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- USA -->
+<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex items-center gap-4 hover:border-primary transition-all group">
+<div class="size-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-50 dark:border-gray-800">
+<img class="w-full h-full object-cover" data-alt="US flag round icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm9do-medXrJUcE81doaulSsBW987K9T7Cp30zyk3xQjFlGUwGbLARdGdFH3Ht1zlnxKjkbqLdWjyVcZoqYW86I2d7QdZKSJ_-bwc6Y_012TenFnCOKJjed96RslUK3qjl37tUwqBxkhJ1QXqdrlP53HG_FH-bJvIJJkmI8kcgZpnxEa65oHLOn2uf2FP8UtT5aGbARbjcdnR7rolHFzdj-g90Ak4oLqm80WFVT9zfuciQLyUQrq4flIPauv9-PCVW5E9LkFFfFTU"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-base">United States</h4>
+<p class="text-xs text-[#637588] dark:text-gray-400">Federal &amp; State Taxes</p>
+</div>
+<span class="material-symbols-outlined text-[#637588] group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+<!-- UK -->
+<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex items-center gap-4 hover:border-primary transition-all group">
+<div class="size-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-50 dark:border-gray-800">
+<img class="w-full h-full object-cover" data-alt="UK flag round icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Clgf9tG48aRX0zPdrv0YM_A09ZN0vh5nxDbGiDdAgOjsfq2QgQIz4tm4OSE1UIhfpSFcGIEKjSLWzEDLFz2FtYM-bDawOTd9l8GMJHa8GiIvLbAPAt7uTuUul_ECD-r_1i6BV1H-Td9rRQ5dYdS57GM4Ki8IaeKEdbPNTMbam1gJxfBevkQ67AbwGzF1Czwa5Zt6GVGVcWZfsTjzvjQFPhOMuhYrcR-a2TWMfnISuKPeDox6YX-lmuR84ZIyX7SKpf2pQPsn9qg"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-base">United Kingdom</h4>
+<p class="text-xs text-[#637588] dark:text-gray-400">PAYE, NI &amp; Student Loan</p>
+</div>
+<span class="material-symbols-outlined text-[#637588] group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+<!-- Germany -->
+<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex items-center gap-4 hover:border-primary transition-all group">
+<div class="size-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-50 dark:border-gray-800">
+<img class="w-full h-full object-cover" data-alt="Germany flag round icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkkMQwOosdBtqIb_HQw-z1k-tW-YcOG5uh2j1pfzj_hsrv-dASHSVCrO10pW0JOgpMc3yP3GsFcqU-je5aTp3C8r0mbbdpfm3e6rITxdo4X8pCilmPhaOfcQ97tGnKZ7TBjKMYC_uUKHkwFcP-NKGLIJA9ZcsrJIzeAqQCN5V46iwE14O4MGEvJ6ww3tJECLi1AZJr61YpvgTRUCc819_3lek87i1v8OyrWj8VN5pDdohRuZWPrvBYWRzdN7DkMKMtqDUGm0Ju-GA"/>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-base">Germany</h4>
+<p class="text-xs text-[#637588] dark:text-gray-400">Lohnsteuer &amp; Social Security</p>
+</div>
+<span class="material-symbols-outlined text-[#637588] group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Bottom Safe Area Spacer -->
+<div class="h-10"></div>
+</main>
+<!-- Navigation Tab Bar (iOS style) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-gray-100 dark:border-gray-800 px-6 py-3 pb-8">
+<div class="max-w-md mx-auto flex items-center justify-between">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#637588] dark:text-gray-400">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold">Guides</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#637588] dark:text-gray-400">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-bold">Recent</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#637588] dark:text-gray-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</div>
+</div>
+</nav>
+</body></html>
