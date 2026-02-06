@@ -63,12 +63,95 @@
 <button class="p-2 text-[#111418] dark:text-white">
 <span class="material-symbols-outlined">search</span>
 </button>
-<button class="p-2 text-[#111418] dark:text-white">
+<button id="menu-button" class="p-2 text-[#111418] dark:text-white">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </div>
 </header>
+
+<!-- Mobile Navigation Menu -->
+<nav id="mobile-menu" class="fixed inset-y-0 right-0 w-64 bg-white dark:bg-gray-900 z-40 transform translate-x-full transition-transform duration-300 ease-in-out hidden">
+    <div class="p-4 pt-16">
+        <ul class="space-y-2">
+            <li>
+                <a href="#" class="flex items-center gap-2 p-2 text-lg font-semibold text-[#111418] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                    <span class="material-symbols-outlined">home</span>
+                    HOME
+                </a>
+            </li>
+            <li>
+                <button id="calculators-toggle" class="flex items-center justify-between w-full p-2 text-lg font-semibold text-[#111418] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                    <span class="flex items-center gap-2">
+                        <span class="material-symbols-outlined">calculate</span>
+                        Calculators
+                    </span>
+                    <span id="calculators-arrow" class="material-symbols-outlined transition-transform duration-300 ease-in-out">expand_more</span>
+                </button>
+                <ul id="calculators-submenu" class="ml-4 space-y-1 overflow-hidden transition-[max-height] duration-300 ease-in-out max-h-0">
+                    <li><a href="usa-calculator.html" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">USA Tax Calculator</a></li>
+                    <li><a href="korea-calculator.html" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">Korea Tax Calculator</a></li>
+                    <li><a href="uk-calculator.html" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">UK Tax Calculator</a></li>
+                    <li><a href="germany-calculator.html" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">Germany Tax Calculator</a></li>
+                </ul>
+            </li>
+            <li>
+                <button id="tax-guides-toggle" class="flex items-center justify-between w-full p-2 text-lg font-semibold text-[#111418] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                    <span class="flex items-center gap-2">
+                        <span class="material-symbols-outlined">book</span>
+                        Tax Guides
+                    </span>
+                    <span id="tax-guides-arrow" class="material-symbols-outlined transition-transform duration-300 ease-in-out">expand_more</span>
+                </button>
+                <ul id="tax-guides-submenu" class="ml-4 space-y-1 overflow-hidden transition-[max-height] duration-300 ease-in-out max-h-0">
+                    <li><a href="#" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">How US Taxes Work</a></li>
+                    <li><a href="#" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">Country Tax Systems</a></li>
+                    <li><a href="#" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">Salary Tax Brackets Explained</a></li>
+                    <li><a href="#" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">Deductions & Credits</a></li>
+                </ul>
+            </li>
+            <li>
+                <button id="countries-toggle" class="flex items-center justify-between w-full p-2 text-lg font-semibold text-[#111418] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                    <span class="flex items-center gap-2">
+                        <span class="material-symbols-outlined">public</span>
+                        Countries
+                    </span>
+                    <span id="countries-arrow" class="material-symbols-outlined transition-transform duration-300 ease-in-out">expand_more</span>
+                </button>
+                <ul id="countries-submenu" class="ml-4 space-y-1 overflow-hidden transition-[max-height] duration-300 ease-in-out max-h-0">
+                    <li><a href="korea-calculator.html" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">Korea</a></li>
+                    <li><a href="usa-calculator.html" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">United States</a></li>
+                    <li><a href="uk-calculator.html" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">United Kingdom</a></li>
+                    <li><a href="germany-calculator.html" class="block p-2 text-base text-[#637588] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">Germany</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="flex items-center gap-2 p-2 text-lg font-semibold text-[#111418] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                    <span class="material-symbols-outlined">info</span>
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center gap-2 p-2 text-lg font-semibold text-[#111418] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                    <span class="material-symbols-outlined">lock</span>
+                    Privacy Policy
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center gap-2 p-2 text-lg font-semibold text-[#111418] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                    <span class="material-symbols-outlined">mail</span>
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center gap-2 p-2 text-lg font-semibold text-[#111418] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+                    <span class="material-symbols-outlined">add_circle</span>
+                    (이외 추가 업데이트 예정.)
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <main class="max-w-md mx-auto pb-20">
 <!-- Hero Section -->
 <section class="px-4 pt-8 pb-6">
@@ -92,7 +175,7 @@
 <label class="text-sm font-semibold text-[#111418] dark:text-gray-200">Annual Gross Income</label>
 <div class="relative flex items-center">
 <span class="absolute left-4 text-[#637588] font-medium">$</span>
-<input class="w-full h-14 pl-8 pr-4 rounded-lg border border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111418] dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-all text-lg font-medium" placeholder="e.g. 75,000" type="number"/>
+<input id="annual-gross-income" class="w-full h-14 pl-8 pr-4 rounded-lg border border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111418] dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-all text-lg font-medium" placeholder="e.g. 75,000" type="text" min="0"/>
 </div>
 </div>
 <!-- Location Input -->
@@ -100,18 +183,17 @@
 <label class="text-sm font-semibold text-[#111418] dark:text-gray-200">Location</label>
 <div class="relative flex items-center">
 <span class="absolute left-4 material-symbols-outlined text-[#637588]">location_on</span>
-<select class="w-full h-14 pl-12 pr-4 rounded-lg border border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111418] dark:text-white focus:ring-2 focus:ring-primary focus:border-primary appearance-none transition-all font-medium">
+<select id="location-select" class="w-full h-14 pl-12 pr-4 rounded-lg border border-[#dce0e5] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111418] dark:text-white focus:ring-2 focus:ring-primary focus:border-primary appearance-none transition-all font-medium">
 <option>United States</option>
+<option>Korea</option>
 <option>United Kingdom</option>
 <option>Germany</option>
-<option>Canada</option>
-<option>Australia</option>
 </select>
 <span class="absolute right-4 material-symbols-outlined text-[#637588] pointer-events-none">expand_more</span>
 </div>
 </div>
 <!-- CTA Button -->
-<button class="w-full bg-primary hover:bg-primary/90 text-white h-14 rounded-lg font-bold text-lg shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98] mt-2">
+<button id="calculate-now-button" class="w-full bg-primary hover:bg-primary/90 text-white h-14 rounded-lg font-bold text-lg shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all active:scale-[0.98] mt-2">
                         Calculate Now
                         <span class="material-symbols-outlined">trending_flat</span>
 </button>
@@ -143,38 +225,44 @@
 </div>
 <div class="grid grid-cols-1 gap-4">
 <!-- USA -->
-<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex items-center gap-4 hover:border-primary transition-all group">
-<div class="size-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-50 dark:border-gray-800">
-<img class="w-full h-full object-cover" data-alt="US flag round icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm9do-medXrJUcE81doaulSsBW987K9T7Cp30zyk3xQjFlGUwGbLARdGdFH3Ht1zlnxKjkbqLdWjyVcZoqYW86I2d7QdZKSJ_-bwc6Y_012TenFnCOKJjed96RslUK3qjl37tUwqBxkhJ1QXqdrlP53HG_FH-bJvIJJkmI8kcgZpnxEa65oHLOn2uf2FP8UtT5aGbARbjcdnR7rolHFzdj-g90Ak4oLqm80WFVT9zfuciQLyUQrq4flIPauv9-PCVW5E9LkFFfFTU"/>
-</div>
-<div class="flex-1">
-<h4 class="font-bold text-base">United States</h4>
-<p class="text-xs text-[#637588] dark:text-gray-400">Federal &amp; State Taxes</p>
-</div>
-<span class="material-symbols-outlined text-[#637588] group-hover:text-primary transition-colors">chevron_right</span>
-</div>
+<a href="usa-calculator.html" class="block">
+                <div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex items-center gap-4 hover:border-primary transition-all group">
+                    <div class="size-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-50 dark:border-gray-800">
+                        <img class="w-full h-full object-cover" data-alt="US flag round icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm9do-medXrJUcE81doaulSsBW987K9T7Cp30zyk3xQjFlGUwGbLARdGdFH3Ht1zlnxKjkbqLdWjyVcZoqYW86I2d7QdZKSJ_-bwc6Y_012TenFnCOKJjed96RslUK3qjl37tUwqBxkhJ1QXqdrlP53HG_FH-bJvIJJkmI8kcgZpnxEa65oHLOn2uf2FP8UtT5aGbARbjcdnR7rolHFzdj-g90Ak4oLqm80WFVT9zfuciQLyUQrq4flIPauv9-PCVW5E9LkFFfFTU"/>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-base">United States</h4>
+                        <p class="text-xs text-[#637588] dark:text-gray-400">Federal &amp; State Taxes</p>
+                    </div>
+                    <span class="material-symbols-outlined text-[#637588] group-hover:text-primary transition-colors">chevron_right</span>
+                </div>
+                </a>
 <!-- UK -->
-<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex items-center gap-4 hover:border-primary transition-all group">
-<div class="size-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-50 dark:border-gray-800">
-<img class="w-full h-full object-cover" data-alt="UK flag round icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Clgf9tG48aRX0zPdrv0YM_A09ZN0vh5nxDbGiDdAgOjsfq2QgQIz4tm4OSE1UIhfpSFcGIEKjSLWzEDLFz2FtYM-bDawOTd9l8GMJHa8GiIvLbAPAt7uTuUul_ECD-r_1i6BV1H-Td9rRQ5dYdS57GM4Ki8IaeKEdbPNTMbam1gJxfBevkQ67AbwGzF1Czwa5Zt6GVGVcWZfsTjzvjQFPhOMuhYrcR-a2TWMfnISuKPeDox6YX-lmuR84ZIyX7SKpf2pQPsn9qg"/>
-</div>
-<div class="flex-1">
-<h4 class="font-bold text-base">United Kingdom</h4>
-<p class="text-xs text-[#637588] dark:text-gray-400">PAYE, NI &amp; Student Loan</p>
-</div>
-<span class="material-symbols-outlined text-[#637588] group-hover:text-primary transition-colors">chevron_right</span>
-</div>
+<a href="uk-calculator.html" class="block">
+                <div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex items-center gap-4 hover:border-primary transition-all group">
+                    <div class="size-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-50 dark:border-gray-800">
+                        <img class="w-full h-full object-cover" data-alt="UK flag round icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Clgf9tG48aRX0zPdrv0YM_A09ZN0vh5nxDbGiDdAgOjsfq2QgQIz4tm4OSE1UIhfpSFcGIEKjSLWzEDLFz2FtYM-bDawOTd9l8GMJHa8GiIvLbAPAt7uTuUul_ECD-r_1i6BV1H-Td9rRQ5dYdS57GM4Ki8IaeKEdbPNTMbam1gJxfBevkQ67AbwGzF1Czwa5Zt6GVGVcWZfsTjzvjQFPhOMuhYrcR-a2TWMfnISuKPeDox6YX-lmuR84ZIyX7SKpf2pQPsn9qg"/>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-base">United Kingdom</h4>
+                        <p class="text-xs text-[#637588] dark:text-gray-400">PAYE, NI &amp; Student Loan</p>
+                    </div>
+                    <span class="material-symbols-outlined text-[#637588] group-hover:text-primary transition-colors">chevron_right</span>
+                </div>
+                </a>
 <!-- Germany -->
-<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex items-center gap-4 hover:border-primary transition-all group">
-<div class="size-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-50 dark:border-gray-800">
-<img class="w-full h-full object-cover" data-alt="Germany flag round icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkkMQwOosdBtqIb_HQw-z1k-tW-YcOG5uh2j1pfzj_hsrv-dASHSVCrO10pW0JOgpMc3yP3GsFcqU-je5aTp3C8r0mbbdpfm3e6rITxdo4X8pCilmPhaOfcQ97tGnKZ7TBjKMYC_uUKHkwFcP-NKGLIJA9ZcsrJIzeAqQCN5V46iwE14O4MGEvJ6ww3tJECLi1AZJr61YpvgTRUCc819_3lek87i1v8OyrWj8VN5pDdohRuZWPrvBYWRzdN7DkMKMtqDUGm0Ju-GA"/>
-</div>
-<div class="flex-1">
-<h4 class="font-bold text-base">Germany</h4>
-<p class="text-xs text-[#637588] dark:text-gray-400">Lohnsteuer &amp; Social Security</p>
-</div>
-<span class="material-symbols-outlined text-[#637588] group-hover:text-primary transition-colors">chevron_right</span>
-</div>
+<a href="germany-calculator.html" class="block">
+                <div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800 flex items-center gap-4 hover:border-primary transition-all group">
+                    <div class="size-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-gray-50 dark:border-gray-800">
+                        <img class="w-full h-full object-cover" data-alt="Germany flag round icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkkMQwOosdBtqIb_HQw-z1k-tW-YcOG5uh2j1pfzj_hsrv-dASHSVCrO10pW0JOgpMc3yP3GsFcqU-je5aTp3C8r0mbbdpfm3e6rITxdo4X8pCilmPhaOfcQ97tGnKZ7TBjKMYC_uUKHkwFcP-NKGLIJA9ZcsrJIzeAqQCN5V46iwE14O4MGEvJ6ww3tJECLi1AZJr61YpvgTRUCc819_3lek87i1v8OyrWj8VN5pDdohRuZWPrvBYWRzdN7DkMKMtqDUGm0Ju-GA"/>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-base">Germany</h4>
+                        <p class="text-xs text-[#637588] dark:text-gray-400">Lohnsteuer &amp; Social Security</p>
+                    </div>
+                    <span class="material-symbols-outlined text-[#637588] group-hover:text-primary transition-colors">chevron_right</span>
+                </div>
+                </a>
 </div>
 </section>
 <!-- Bottom Safe Area Spacer -->
@@ -201,4 +289,5 @@
 </div>
 </div>
 </nav>
+    <script src="main.js"></script>
 </body></html>
